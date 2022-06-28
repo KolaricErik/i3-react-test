@@ -1,0 +1,390 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #e9e9e9;
+  color: #494949;
+}
+
+header {
+  background-color: rgb(64, 64, 255);
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  color: white;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav li {
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.3s;
+
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+} 
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: rgb(113, 113, 255);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(64, 64, 255);
+  top: 50px;
+  padding: 20px;
+  left: 0;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+
+
+.korisnik {
+  width: 310px;
+  padding-bottom: 15px;
+  margin: auto;
+  border:1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px #ccc;
+  position: relative;
+  text-align: center;
+}
+
+.tekst {
+  position: absolute;
+  top: 20%;
+  right: 70%;
+  font-size: 40px;
+  padding: 6px;
+  font-style: oblique;
+  border-radius: 10px;
+  border: solid white 1px;
+  background-color: rgb(44, 171, 255);
+  color: white;
+}
+
+.korisnik:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.korisnici {
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+
+.foto {
+  border-radius: 50%;  
+  height: 270px;
+  width: 270px;
+  box-shadow: 10px 10px 5px #ccc;
+  margin-bottom: 15px;
+  margin: 15px;
+
+}
+
+#logo {
+  width: 30px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mobile-user {
+  display: none;
+}
+
+#naslov {
+  padding-bottom: 40px;
+}
+
+#lijevi {
+  width: 50%;
+  padding: 7%;
+  float: left;
+  margin-left: 50px;
+}
+
+#desni {
+  width: 50%;
+  padding: 7%;
+  padding-left: 50px;
+  margin-right: 50px;
+}
+
+.paragraf {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#fotka {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+
+}
+
+#tekst {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#oglasi {
+  float: left;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  top: 200px;
+}
+
+.oglas {
+  float: left;
+  justify-content: space-evenly;
+  width: auto;
+  padding: 15px;
+  margin: auto;
+}
+
+.animacija {
+  transition: 0.6s;
+  transform: translateY(-180px) rotate(1turn);
+}
+
+.slikica {
+  width: 100px;
+}
+
+#dolazi {
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .foto {
+    width: 160px;
+    height: 160px;
+  }
+
+  .korisnik {
+    width: 200px;
+  }
+
+  #fotka {
+    width: 80%;
+  }
+
+  #lijevi {
+    width: 80%;
+  }
+
+  #desni {
+    width: 80%;
+    position: relative;
+    margin: 0 auto; 
+  }
+
+  #tekst {
+    display: block;
+    flex-direction: unset;
+  }
+
+  .tekst {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+    
+  }
+
+  #logo {
+    position: relative;
+    float: left;
+    right: 60px;
+    margin: auto;
+  }
+
+  #hamburger-icon {
+    display: block;
+    margin-left: auto;
+    padding-right: 20px;
+    
+  } 
+
+  .mobile-menu {
+    display: block;
+    z-index: 1;
+  }
+
+  #sakriveno {
+    transition: 0.3s;
+  }
+
+  #prikazano {
+    display: none;
+  }
+
+  .mobile-user {
+    display: block;
+    padding-top: 100px;
+  }
+
+  .prikaz {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%; 
+  }
+
+  .foto {
+    width: 170px;
+    height: 170px;
+    box-shadow: 10px 10px 5px #ccc;  
+
+  }
+
+  .korisnik {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 210px;
+    height: auto;
+  }
+
+  .tekst {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .korisnici {
+    display: none;
+  }
+
+  #oglasi {
+    position: relative;
+    top: 160px;
+    width: 80%;
+  }
+
+  .oglas {
+    width: 60%;
+  }
+
+  .animacija {
+    transition: 0.6s;
+    transform: translateY(-180px) rotate(1turn);
+  }
+
+
+
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.naprijed{
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  font-size: 30px;
+  color: rgba(107, 107, 107, 0.8);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.otraga{
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  font-size: 30px;
+  color: rgba(107, 107, 107, 0.8);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.1);
+}
+  
+
+}
